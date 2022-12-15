@@ -1,38 +1,74 @@
-.App {
+/* App.css  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1635776062043-223faf322554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80");
+  background-repeat: none;
+  color: #202020;
+  font-family: 'Unbounded', cursive;  
+  line-height: 2;
+  font-size: .8em;
+}
+
+.player {
+  margin: 5em;
+  padding: 4em;
+  box-shadow: 0px 0px 32px #20202055;
+  background-color:rgba(235, 246, 255, 0.424);
+  border-radius: 1.5em;
+}
+
+.artwork {
+  margin: 1em;
+  padding: 1.5em;
+  box-shadow: 0px 0px 32px #20202055;
+  background-color:rgba(235, 246, 255, 0.424);
+  border-radius: 1.5em;
+}
+
+.playlist {
+  line-height: 3;
+}
+
+.playlistCol, .sectopm {
+  padding-left: 3em;
+  margin-top: 2em;
+}
+.heavy {
+  font-weight: 900;
+}
+
+.logo {
+  color:#202020;
+  height: 4em;
+  max-width:4em;
+  margin-left:2em;
+}
+
+.music-player-controls{
+  margin: 1em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.player-button {
+  font-size: 1.2em;
+  margin:1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.seek {
+  color: black;
+  margin: .8em;
+  height: .4em;
 }
