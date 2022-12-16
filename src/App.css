@@ -51,9 +51,11 @@ body {
 }
 
 .logo {
+  background-image: url("/public/logo/PNG/logo3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   color:#202020;
-  height: 4em;
-  max-width:4em;
+  height: 5em;
   margin-left:2em;
 }
 
