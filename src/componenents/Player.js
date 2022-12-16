@@ -3,18 +3,16 @@
 import React from "react";
 import Navigation from "./Navigation"
 import PlayerDetails from "./PlayerDetails";
-import Seeker from "./Seeker";
+import { Container } from 'react-bootstrap';
 
 
 class Player extends React.Component {
   render() {
     return (
-      <div className="player">
-        <Navigation />
-        <PlayerDetails />
-        <Seeker />
-
-      </div>
+      <Container className="pt-4">
+          <Navigation />
+          <PlayerDetails />
+      </Container>
     );
   }
 }

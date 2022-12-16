@@ -11,6 +11,8 @@
 
 html {
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -23,15 +25,12 @@ body {
 }
 
 .player {
-  margin: 5em;
-  padding: 4em;
   box-shadow: 0px 0px 32px #20202055;
   background-color:rgba(235, 246, 255, 0.424);
   border-radius: 1.5em;
 }
 
 .artwork {
-  margin: 1em;
   padding: 1.5em;
   box-shadow: 0px 0px 32px #20202055;
   background-color:rgba(235, 246, 255, 0.424);
@@ -42,10 +41,6 @@ body {
   line-height: 3;
 }
 
-.playlistCol, .sectopm {
-  padding-left: 3em;
-  margin-top: 2em;
-}
 .heavy {
   font-weight: 900;
 }
@@ -53,10 +48,10 @@ body {
 .logo {
   background-image: url("/public/logo/PNG/logo3.png");
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   color:#202020;
   height: 5em;
-  margin-left:2em;
 }
 
 .music-player-controls{
@@ -66,9 +61,11 @@ body {
 
 .player-button {
   font-size: 1.2em;
-  margin:1em;
 }
 
+.player-button:hover{
+  font-size: 1.8em;
+}
 .seek {
   color: black;
   margin: .8em;

@@ -6,11 +6,11 @@ import { Col, Row } from 'react-bootstrap'
 function PlayerControls(props) {
   return (
     <Row div className="music-player-controls">
-      <Col><TbArrowsShuffle  className="player-button" /></Col>
-      <Col><TbPlayerSkipBack  className="player-button" /></Col>
-      <Col><TbPlayerPlay  className="play-button player-button" /></Col>
-      <Col><TbPlayerSkipForward  className="player-button" /></Col>
-      <Col><TbRepeat className="player-button" /></Col>
+      <Col><TbArrowsShuffle className="player-button"/></Col>
+      <Col><TbPlayerSkipBack className="player-button"/></Col>
+      <Col><TbPlayerPlay className="player-button"/></Col>
+      <Col><TbPlayerSkipForward className="player-button"/></Col>
+      <Col><TbRepeat className="player-button"/></Col>
       
 
 
