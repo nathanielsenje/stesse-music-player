@@ -1,21 +1,34 @@
 // PlayerDetails.js
 
 import React from "react";
-import { Container, Row, Col, Image, Table } from 'react-bootstrap';
+import { Container, Row, Col, Image, Table, InputGroup, Form } from 'react-bootstrap';
 import PlayerControls from "./PlayerControls";
 import Seeker from "./Seeker";
-import { TbStar,TbStarHalf } from 'react-icons/tb'
+import { TbStar,TbStarHalf, TbSearch} from 'react-icons/tb'
 
 function PlayerDetails(props) {
   return (
-    <Container  className="mt-3 player p-5" fluid>
-      <Row id="details-starts" className="center">
+    <Container className="mt-3 player p-5" fluid>
+      {/* Search field */}
+      <InputGroup>
+        <InputGroup.Text id="btnGroupAddon" className="search-bar">
+          <TbSearch />
+          </InputGroup.Text>
+        <Form.Control
+            className="search-bar"
+            type="text"
+            placeholder="Search"
+            aria-describedby="btnGroupAddon"
+          />
+        </InputGroup>
+      
+      <Row id="details-starts" className="d-flex aligns-items-center justify-content-center mt-3">
         <Col className="artwork" md="auto">
-          <Image src="https://source.unsplash.com/featured/400x400" fluid md="auto">
+          <Image src="https://source.unsplash.com/featured/400x400" fluid rounded md="auto">
           </Image>
           <PlayerControls />
         </Col>
-        <Col className="mt-3">
+        <Col className="mt-5">
           <Row className="text-center">
             <Col>
               <h2 className="heavy">Set the Stage</h2>

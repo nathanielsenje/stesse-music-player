@@ -9,10 +9,12 @@ import { Container } from 'react-bootstrap';
 class Player extends React.Component {
   render() {
     return (
+      <div className="d-flex aligns-items-center justify-content-center">
       <Container className="pt-4">
           <Navigation />
           <PlayerDetails />
-      </Container>
+        </Container>
+        </div>
     );
   }
 }

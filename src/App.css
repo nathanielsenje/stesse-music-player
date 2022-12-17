@@ -54,20 +54,11 @@ body {
   height: 5em;
 }
 
-.music-player-controls{
-  margin: 1em;
-  text-align: center;
-}
-
-.player-button {
-  font-size: 1.2em;
-}
-
-.player-button:hover{
-  font-size: 1.8em;
-}
 .seek {
-  color: black;
-  margin: .8em;
   height: .4em;
+}
+
+.search-bar {
+  background-color: #fafafa6a;
+  border-radius: 2em;
 }
