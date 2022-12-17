@@ -1,89 +1,69 @@
+
+
 import React from 'react';
-import { TbPlayerPlay, TbArrowsShuffle, TbRepeat, TbPlayerSkipForward, TbPlayerSkipBack } from 'react-icons/tb';
-import { ButtonGroup, Button} from 'react-bootstrap'
+import { TbPlayerPlay, TbPlayerPause, TbArrowsShuffle, TbRepeat, TbPlayerSkipForward, TbPlayerSkipBack } from 'react-icons/tb';
+import { ButtonGroup, Button } from 'react-bootstrap'
 
+class PlayerControls extends React.Component {
 
-function PlayerControls(props) {
-
-  const handleClick = () => {
-    console.log("You clicked play");
+  constructor(props) {
+    super(props);
+    this.state = { isPlaying: true };
+    this.handlePlay.bind(this);
   }
 
-  const handlePlay = () => {
-    console.log("Music Playing");
+  handlePlay() {
+    console.log("Button Clicked!");
+    this.setState(currentState => ({
+      isPlaying: !currentState.isPlaying
+    }));
+    console.log(this.state.isPlaying);
   }
 
-  const handlePause = () => {
-    console.log("Music Paused");
-  }
+  render() {
 
-  const handleNext = () => {
-    console.log("Playin Next Song");
-  }
+    let button;
 
-  const handlePrevious = () => {
-    console.log("Playing Previous Song");
-  }
+    // const PlayPause = <Button size="lg" variant="light"><TbPlayerPlay id="repeat"/></Button>
 
-  const handleShuffle = () => {
-    console.log("Shuffle Toggle");
-  }
-  
-  const handleRepeat = () => {
-    console.log("Repeat Toggle");
-  }
-  return (
-    <>
-          <ButtonGroup className="mt-3 d-flex aligns-items-center justify-content-center" aria-label="Basic example">
-          <Button variant="light">
+    if (this.state.isPlaying) {
+      button = <Button size="lg" variant="light" onClick={() => this.handlePlay()} ><TbPlayerPause id="pause"></TbPlayerPause></Button>
+    } else {
+      button = <Button size="lg" variant="light" onClick={() => this.handlePlay()} >
+        <TbPlayerPlay id="play"></TbPlayerPlay>
+      </Button>
+    }
+    return (
+      <><ButtonGroup className="mt-3 d-flex aligns-items-center justify-content-center" aria-label="Basic example">
+        <Button size="lg" variant="light">
           <TbArrowsShuffle
             id="shuffle"
-            onClick={handleShuffle}
+          // onClick={}
           />
-          </Button>
-          <Button variant="light">
+        </Button>
+        <Button size="lg" variant="light">
           <TbPlayerSkipBack
             id="back"
-            onClick={handlePrevious}
+          // onClick={}
           />
-          </Button>
-          <Button variant="light">
-          <TbPlayerPlay
-            id="play"
-            onClick={handlePlay} />
-          </Button>
-          <Button variant="light">
+        </Button>
+        {button}
+        <Button size="lg" variant="light">
           <TbPlayerSkipForward
             id="next"
-            onClick={handleNext}
+          // onClick={}
           />
-          </Button>
-          <Button variant="light">
+        </Button>
+        <Button size="lg" variant="light">
           <TbRepeat
             id="repeat"
-            onClick={handleRepeat}
+          // onClick={}
           />
-          </Button>
+        </Button>
       </ButtonGroup>
-      
-
-
-      
-      {/* <button className="skip-btn" onClick={() => props.SkipSong(false)}>
-        <FontAwesomeIcon icon="faShuffle" />
-      </button>
-      <button
-        className="play-btn"
-        onClick={() => props.setIsPlaying(!props.isPlaying)}
-      >
-        <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
-      </button>
-      <button className="skip-btn" onClick={() => props.SkipSong()}>
-        <FontAwesomeIcon icon={faForward} />
-      </button> */}
-      
-    </>
-  );
+      </>
+    )
+  }
 }
 
-export default PlayerControls; 
+export default PlayerControls;

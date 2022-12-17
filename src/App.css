@@ -62,3 +62,15 @@ body {
   background-color: #fafafa6a;
   border-radius: 2em;
 }
+
+.albumCover {
+  height: 100%;
+  width: 100%;
+  background-image:url("https://source.unsplash.com/featured/400x400");
+  /* background-image: linear-gradient(0deg, #ff00997d, rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/featured/400x400'); */
+}
+
+.paused {
+  
+}
+
