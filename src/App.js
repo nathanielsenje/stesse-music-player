@@ -1,7 +1,7 @@
 // App.js
 
 import React from 'react';
-import Player from './componenents/Player';
+import Player from './components/Player';
 import './App.css';
 
 const App=()=> {
